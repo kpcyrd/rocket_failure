@@ -1,0 +1,25 @@
+[package]
+name = "rocket_failure"
+version = "0.1.0"
+description = "Failure like error handling for rocket"
+authors = ["kpcyrd <git@rxv.cc>"]
+license = "MIT/Apache-2.0"
+repository = "https://github.com/kpcyrd/rocket_failure"
+keywords = ["rocket", "failure", "errors", "api"]
+readme = "README.md"
+edition = "2018"
+
+#[badges]
+#travis-ci = { repository = "kpcyrd/rocket_failure" }
+
+[features]
+with-rocket = ["rocket", "serde_json"]
+
+[dependencies]
+serde = "1.0"
+serde_derive = "1.0"
+serde_json = { version = "1.0", optional = true }
+rocket = { version = "0.4", optional = true }
+
+[dev-dependencies]
+failure = "0.1"
